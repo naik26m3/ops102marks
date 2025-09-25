@@ -51,7 +51,7 @@ int main()
     }
     else
     {
-        printf("You need to do at least %.0f with 100%% score to get the average of 95%%\n", times);
+        printf("You need to do at least %.0f attempts with 100%% score to get the average of 95%%\n", times);
     }
 
 
