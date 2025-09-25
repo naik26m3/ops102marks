@@ -1,5 +1,7 @@
+#include <conio.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
 
 int main()
 {
@@ -45,14 +47,20 @@ int main()
 
     times = (wantedscore * (float) counter - sum) / (100 - wantedscore);
 
+    times = ceil(times);
+
     if (times <= 0)
     {
         printf("You passed your aim, you don't need to do anymore\n");
     }
     else
     {
-        printf("You need to do at least %.0f attempts with 100%% score to get the average of 95%%\n", times);
+        printf("You need to do at least %0.lf attempts with 100%% score to get the average of %0.2lf%%\n", times, wantedscore);
     }
+
+    printf("Press any key to quit...\n");
+    _getch();
+    return 0;
 }
 
 
